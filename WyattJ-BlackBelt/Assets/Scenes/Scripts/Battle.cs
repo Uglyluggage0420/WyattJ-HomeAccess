@@ -275,7 +275,7 @@ public class Battle : MonoBehaviour
     {
         ShowText("Click Space to Fill the Bar to use Fireball", 2f);
     
-        Invoke("FireballMinigameStart", 2f);
+        Invoke("FireballMinigameStart", 1f);
         
         
 
@@ -286,7 +286,7 @@ public class Battle : MonoBehaviour
     void SlashMinigameSetup()
     {
         ShowText("Hold Space until the bar fills up to the green box", 2f);
-        Invoke("SlashMinigameStart", 2f);
+        Invoke("SlashMinigameStart", 1f);
     }
 
     void SlashMinigameStart()

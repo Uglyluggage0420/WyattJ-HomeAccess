@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour
         if (Vector3.Distance(Player.transform.position, transform.position) < 5f)
         {
             targetPos = Player.transform.position;
-            EnemyMoveSpeed = EnemyMoveSpeed * 1.005f;
+            EnemyMoveSpeed = EnemyMoveSpeed * 1.0001f;
         }
         
         

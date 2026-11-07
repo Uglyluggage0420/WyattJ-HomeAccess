@@ -26,7 +26,7 @@ public class TutorialFireballMinigame : MonoBehaviour
     {
         if (minigame == true)
         {
-            fireballBar.fillAmount -= 0.4f * Time.deltaTime;
+            fireballBar.fillAmount -= 0.3f * Time.deltaTime;
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
