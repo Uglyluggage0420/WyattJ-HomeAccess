@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Entrance.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: ff23215afff74ae4b9c02bea14f654a9
+  - enabled: 1
+    path: Assets/Scenes/RegularBattleScene.unity
+    guid: 5cb326071735dee4487d609f085e527d
+  - enabled: 1
+    path: Assets/Scenes/Hall1.unity
+    guid: 9ba16be0f264b5b47afa3e535248c92e
+  - enabled: 1
+    path: Assets/Scenes/Hall2.unity
+    guid: 3262ebf078dec5348ad74eba4a25c9d0
+  - enabled: 1
+    path: Assets/Scenes/TankBattleScene.unity
+    guid: c9fa93a33bf807f45acb26acdb80fae8
+  - enabled: 1
+    path: Assets/Scenes/Hall3.unity
+    guid: 843b1922b22858a4cac6cb6fba13ecb6
+  - enabled: 1
+    path: Assets/Scenes/Hall4.unity
+    guid: 76ec8ab7f442ff0458a70e160e0d356f
+  - enabled: 1
+    path: Assets/Scenes/Freezer.unity
+    guid: efbc41161447b0c488a34a2be6ef97f1
+  - enabled: 1
+    path: Assets/Scenes/Hall5.unity
+    guid: 70f89002752d2d04aa63108ef115046e
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 1062902abe124ae4caf904803171d9f1
+  - enabled: 1
+    path: Assets/Scenes/KitchenBattleScene.unity
+    guid: 9905414b042e4614194bfdc937793e4e
+  - enabled: 1
+    path: Assets/Scenes/DamageBattleScene.unity
+    guid: b981f371dc97c79478e4e02cce80bb93
+  - enabled: 1
+    path: Assets/Scenes/TutorialBattleScene.unity
+    guid: 162da9c16c1dbbe47a37049835f9a767
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a4f473a85bc7e9848bdb8c5d0da74cec
+  m_configObjects: {}
