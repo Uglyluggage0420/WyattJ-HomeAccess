@@ -447,6 +447,9 @@ MonoBehaviour:
   maxGold: 0
   EXP: {fileID: 208181336}
   enemyIsChef: 1
+  enemyIsAlchemist: 0
+  enemyIsKing: 0
+  enemyIsWizard: 0
 --- !u!4 &117096803
 Transform:
   m_ObjectHideFlags: 0
@@ -620,7 +623,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 208181335}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Battle, Assembly-CSharp
         m_MethodName: UniqueMove
         m_Mode: 1
@@ -759,7 +762,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 159963023306394198, guid: ee3467cb28745424baccc5d58ebe777d, type: 3}
   m_PrefabInstance: {fileID: 1296156947}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &208181335
+--- !u!114 &208181336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7855406246477963960, guid: ee3467cb28745424baccc5d58ebe777d, type: 3}
+  m_PrefabInstance: {fileID: 1296156947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208181329}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69608fe0aca0fe4ba59f5c031640233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &208181341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -768,7 +782,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 208181329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf5bb659f86e1946bdb35194a65d429, type: 3}
+  m_Script: {fileID: 11500000, guid: a75977394fde5724e9d414e7f97580ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 117096802}
@@ -785,24 +799,14 @@ MonoBehaviour:
   Scene: {fileID: 208181336}
   fireballBar: {fileID: 1094547675}
   emptyfireballBar: {fileID: 1752912029}
-  fireballMinigame: {fileID: 1094547672}
-  slashMinigame: {fileID: 2132448616}
+  fireballMinigame: {fileID: 0}
+  slashMinigame: {fileID: 0}
   emptySlashBar: {fileID: 124316217}
   slashBar: {fileID: 2132448617}
   slashHitBar: {fileID: 706584528}
   burn: 0
+  PlayerBurned: 0
   GodText: {fileID: 346400142}
---- !u!114 &208181336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7855406246477963960, guid: ee3467cb28745424baccc5d58ebe777d, type: 3}
-  m_PrefabInstance: {fileID: 1296156947}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208181329}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a69608fe0aca0fe4ba59f5c031640233, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &272582120
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +890,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 208181335}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Battle, Assembly-CSharp
         m_MethodName: UniqueMove
         m_Mode: 1
@@ -1670,8 +1674,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 208181335}
-        m_TargetAssemblyTypeName: Battle, Assembly-CSharp
+      - m_Target: {fileID: 208181341}
+        m_TargetAssemblyTypeName: ChefBattle, Assembly-CSharp
         m_MethodName: FireballMove
         m_Mode: 1
         m_Arguments:
@@ -2028,8 +2032,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 208181335}
-        m_TargetAssemblyTypeName: Battle, Assembly-CSharp
+      - m_Target: {fileID: 208181341}
+        m_TargetAssemblyTypeName: ChefBattle, Assembly-CSharp
         m_MethodName: SlashMove
         m_Mode: 1
         m_Arguments:
@@ -2233,6 +2237,7 @@ GameObject:
   - component: {fileID: 1094547673}
   - component: {fileID: 1094547675}
   - component: {fileID: 1094547672}
+  - component: {fileID: 1094547676}
   m_Layer: 5
   m_Name: FireballEnergyBar
   m_TagString: Untagged
@@ -2252,7 +2257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917c43129afb5c4587e1fbb2c301953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Battle: {fileID: 208181335}
+  Battle: {fileID: 0}
   fireballBar: {fileID: 1094547675}
   emptyFireballBar: {fileID: 1752912030}
   health: {fileID: 1207977204}
@@ -2314,6 +2319,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1094547676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094547671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f78cd9a3433b0f4b9f6d3659a0d6924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Battle: {fileID: 208181341}
+  fireballBar: {fileID: 1094547675}
+  emptyFireballBar: {fileID: 1752912030}
+  health: {fileID: 1207977204}
+  minigame: 0
 --- !u!1 &1128924448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,7 +2580,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 159963023306394198, guid: ee3467cb28745424baccc5d58ebe777d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 208181335}
+      addedObject: {fileID: 208181341}
   m_SourcePrefab: {fileID: 100100000, guid: ee3467cb28745424baccc5d58ebe777d, type: 3}
 --- !u!1 &1692772449
 GameObject:
@@ -3436,7 +3458,7 @@ GameObject:
   - component: {fileID: 2132448615}
   - component: {fileID: 2132448618}
   - component: {fileID: 2132448617}
-  - component: {fileID: 2132448616}
+  - component: {fileID: 2132448619}
   m_Layer: 5
   m_Name: SlashBar
   m_TagString: Untagged
@@ -3463,25 +3485,6 @@ RectTransform:
   m_AnchoredPosition: {x: -270, y: 57.69998}
   m_SizeDelta: {x: 250, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2132448616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2132448614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4affe38093390145a180e8e1d330cd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  battle: {fileID: 208181335}
-  slashMinigame: 0
-  SlashBar: {fileID: 2132448617}
-  emptySlashBar: {fileID: 124316219}
-  SlashHitBar: {fileID: 706584528}
-  randomX: 0
-  targetZone: {fileID: 706584526}
 --- !u!114 &2132448617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3520,6 +3523,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132448614}
   m_CullTransparentMesh: 1
+--- !u!114 &2132448619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132448614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debc4756068acf5478347040300d431d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battle: {fileID: 208181341}
+  slashMinigame: 0
+  SlashBar: {fileID: 2132448617}
+  emptySlashBar: {fileID: 124316219}
+  SlashHitBar: {fileID: 706584528}
+  randomX: 0
+  targetZone: {fileID: 706584526}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

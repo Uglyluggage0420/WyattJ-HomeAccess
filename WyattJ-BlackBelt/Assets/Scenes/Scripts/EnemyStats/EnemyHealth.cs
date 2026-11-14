@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,6 +20,9 @@ public class EnemyHealth : MonoBehaviour
     public int maxGold;
     public PlayerMovement EXP;
     public bool enemyIsChef;
+    public bool enemyIsAlchemist;
+    public bool enemyIsKing;
+    public bool enemyIsWizard;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,7 +76,22 @@ public class EnemyHealth : MonoBehaviour
                 PlayerPrefs.SetInt("ChefAlive", 0);
                 health.Heal(100f);
             }
-            health.Heal(0.25f);
+            else if (enemyIsAlchemist == true)
+            {
+                PlayerPrefs.SetInt("AlchemistAlive", 0);
+                health.Heal(100f);
+            }
+            else if (enemyIsKing == true)
+            {
+                PlayerPrefs.SetInt("KingAlive", 0);
+                health.Heal(100f);
+            }
+            else if (enemyIsWizard == true)
+            {
+                PlayerPrefs.SetInt("WizardAlive", 0);
+                health.Heal(100f);
+            }
+                health.Heal(0.25f);
             Debug.Log("You beat the Enemy!");
             EXP.EXPbar.fillAmount += EXPgiven;
             PlayerPrefs.SetFloat("EXPBarFill", EXP.EXPbar.fillAmount);
