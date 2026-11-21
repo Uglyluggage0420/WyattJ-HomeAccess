@@ -14,13 +14,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (currentScene == "Entrance")
+        if (currentScene == "Courtyard")
         {
-            PlayerPrefs.SetString("CurrentCheckpoint", "Entrance");
+            PlayerPrefs.SetString("CurrentCheckpoint", "Courtyard");
         }
-        else if (currentScene == "Hall5")
+        else if (currentScene == "Pantry")
         {
-            PlayerPrefs.SetString("CurrentCheckpoint", "Hall5");
+            PlayerPrefs.SetString("CurrentCheckpoint", "Pantry");
         }
         else if (currentScene == "Armoury")
         {

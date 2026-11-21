@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetFloat("CurrentHealth", PlayerPrefs.GetInt("PlayerLevel") + 2);
         PlayerPrefs.SetInt("PlayerLevel", 1);
         PlayerPrefs.SetFloat("EXPBarFill", 0f);
-        PlayerPrefs.SetString("CurrentScene", "Entrance");
+        PlayerPrefs.SetString("CurrentScene", "Courtyard");
 
     }
 

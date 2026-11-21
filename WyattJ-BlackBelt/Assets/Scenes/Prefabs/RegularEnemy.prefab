@@ -208,10 +208,13 @@ MonoBehaviour:
   damage: 0.25
   health: {fileID: 0}
   EXPgiven: 0.1
-  minGold: 1
-  maxGold: 2
+  minGold: 2
+  maxGold: 3
   EXP: {fileID: 0}
   enemyIsChef: 0
+  enemyIsAlchemist: 0
+  enemyIsKing: 0
+  enemyIsWizard: 0
 --- !u!222 &877087095905762360
 CanvasRenderer:
   m_ObjectHideFlags: 0

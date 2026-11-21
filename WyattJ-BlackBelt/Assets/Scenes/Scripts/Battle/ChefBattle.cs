@@ -25,8 +25,8 @@ public class ChefBattle : MonoBehaviour
     public PlayerMovement Scene;
     public Image fireballBar;
     public GameObject emptyfireballBar;
-    public FireballMinigame fireballMinigame;
-    public SlashMinigame slashMinigame;
+    public ChefFireballMinigame fireballMinigame;
+    public ChefSlashMinigame slashMinigame;
     public GameObject emptySlashBar;
     public Image slashBar;
     public Image slashHitBar;
@@ -113,6 +113,7 @@ public class ChefBattle : MonoBehaviour
         {
             ShowText("Today's Special! YOU!", 2f);
         }
+        Invoke("EnemyMove", 2.5f);
     }
 
     public void EnemyMove()
@@ -358,7 +359,7 @@ public class ChefBattle : MonoBehaviour
         }
         //enemyHealth.EnemyCurrentHealth -= 0.25f;
         //enemyHealth.EnemyCurrentHealth -= 0.25f;
-        EnemyTurn();
+        Invoke("EnemyTurn", 1f);
     }
 
     public void SlashMinigameLost()
@@ -367,7 +368,7 @@ public class ChefBattle : MonoBehaviour
         slash.transform.position = new Vector3(-3.5f, -2f, 0f);
         slash.GetComponent<SpriteShapeRenderer>().enabled = true;
         Invoke("SlashVisuals", 1);
-        EnemyTurn();
+        Invoke("EnemyTurn", 1f);
     }
 
     void FireballMinigameStart()
@@ -405,7 +406,9 @@ public class ChefBattle : MonoBehaviour
             Invoke("FailedFireballVisuals", 1);
             PlayerHealth.TakeDamage(0.25f);
         }
-        EnemyTurn();
+        Invoke("EnemyTurn", 1f);
+
+
     }
 
 

@@ -8,7 +8,7 @@ public class CheckpointSetter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentScene = PlayerPrefs.GetString("CurrentScene", "Entrance");
+        CurrentScene = PlayerPrefs.GetString("CurrentScene", "Courtyard");
     }
 
     // Update is called once per frame

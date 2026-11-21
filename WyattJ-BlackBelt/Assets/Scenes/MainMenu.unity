@@ -904,15 +904,15 @@ MonoBehaviour:
     touch an enemy. Enemies have a base miss chance of 10% which can go up to 20%
     at max level. The player will always go first in battle. After winning a battle,
     you gain 0.25 health. If it is a boss, you heal back to full health. After winning
-    a battle, you gain a bit of gold and exp. If the enemy doesn''t miss, it has
-    a 10% chance of hitting for an extra 0.25 damage.
+    a battle, you gain a bit of gold and exp. If the enemy hits you, it has a 10%
+    chance of hitting for an extra 0.25 damage.
 
 
-    The Map: There are 3
-    checkpoints, and 4 different bosses you can face. There are also 3 different
-    kinds of enemies you can face throughout the map. You can also find items and
-    gold throughout the map. At a checkpoint, there is a shop and healing station.
-    You can buy 5 different moves and items using gold that you receive from battle.
+    The Map: There are 3 checkpoints,
+    and 4 different bosses you can face. There are also 3 different kinds of enemies
+    you can face throughout the map. You can also find items and gold throughout
+    the map. At a checkpoint, there is a shop and healing station. You can buy 5
+    different moves and items using gold that you receive from battle.
 
 
 
@@ -1739,7 +1739,7 @@ MonoBehaviour:
     are stunned next turn. All of the minigames are easy except for Reckless Strike
     and Multi-Slash. \n\nItems: \nBeet: Heals 0.5 health. Cost: 5 gold.\nSteak: Heals
     2.5 health. Cost: 30 gold.\nRootbeer: For the next battle, you heal 0.125 health
-    if you miss. This includes if you win the Fireball minigame but still miss.This
+    if you miss. This includes if you win the Fireball minigame but still miss. This
     does not include if you stun yourself for Thunder after you win the minigame.
     Cost: 10 gold.\nYou can have 3 items in your inventory. Items are only useable
     outside of battle. \n\nOther Info: If you die, you lose 15-25% of your gold.
@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Knight \nHealth: 2\nDamage: 0.25\nGold Drop: 1-2\nExp Drop: 0.1"
+  m_text: "Knight \nHealth: 2\nDamage: 0.25\nGold Drop: 2-3\nExp Drop: 0.1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4103,7 +4103,7 @@ MonoBehaviour:
 
     Damage: 0.125
 
-    Gold Drop: 2-3
+    Gold Drop: 3-5
 
     Exp
     Drop: 0.15'
@@ -4246,7 +4246,7 @@ MonoBehaviour:
 
     Damage: 1
 
-    Gold Drop: 3-5
+    Gold Drop: 4-7
 
     Exp Drop:
     0.15'
@@ -5165,7 +5165,7 @@ MonoBehaviour:
     moves except Run have easy minigames. Reckless strike and multi-slash have harder
     ones.\n\nSlash: Do a basic attack and deal 0.5 physical damage. Has a 10% to
     deal 0.75 damage instead\n\nFireball: Charge up a fireball and has a 70% chance
-    to deal 1 damage, and a 30% to damage the Player. If it succesfully hits, there
+    to deal 1 damage, and a 30% to damage the Player. If it successfully hits, there
     is a 10% to inflict burn, which deals 0.125 damage at the end of each turn. Is
     a special attacking move.\n\nRun: Has a 50% chance to Run, and 50% chance to
     deal 0.25 damage to the Player (You do not get health if you Run from battle).\n\nLife
@@ -5174,7 +5174,7 @@ MonoBehaviour:
     once per battle.\n\nMulti-Slash: Do a max of 5 basic attacks dealing 0.25 physical
     damage per attack, but is difficult to time. Cost: 30 gold. Useable every other
     turn.\n\nReckless Strike: Has a very difficult to time minigame, but if you succeed,
-    you do 1.5  physical damage. If you fail, you are vulnerable and take 0.5 damage
+    you do 1.5 physical damage. If you fail, you are vulnerable and take 0.5 damage
     instead. Cost: 30 gold. Useable every 3rd turn.\n\nThunder: Strike the enemy
     with thunder dealing 0.75 special damage, with an 85% chance to stun the enemy,
     but if it fails, you get stunned for one turn instead. However, you still do

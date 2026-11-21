@@ -13,7 +13,7 @@ public class Play : MonoBehaviour
 
     public void SwitchToEntrance()
     {
-        SceneManager.LoadScene("Entrance");
+        SceneManager.LoadScene("Courtyard");
     }
 
     // Update is called once per frame

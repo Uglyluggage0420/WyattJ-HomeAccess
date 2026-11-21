@@ -204,7 +204,10 @@ MonoBehaviour:
   damage: 0.125
   health: {fileID: 0}
   EXPgiven: 0.15
-  minGold: 2
-  maxGold: 3
+  minGold: 3
+  maxGold: 5
   EXP: {fileID: 0}
   enemyIsChef: 0
+  enemyIsAlchemist: 0
+  enemyIsKing: 0
+  enemyIsWizard: 0

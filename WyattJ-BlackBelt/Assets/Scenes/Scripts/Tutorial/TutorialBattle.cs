@@ -37,6 +37,11 @@ public class TutorialBattle : MonoBehaviour
    // public TextMeshProUGUI EnemyMissed;
     public TextMeshProUGUI GodText;
 
+    public GameObject canvas;
+    public GameObject tutorialBackground;
+    public List<GameObject> tutorialBlocks;
+    public int tutorialCounter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,7 +84,20 @@ public class TutorialBattle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
+        if(Input.GetKeyDown(KeyCode.E) && tutorialCounter == tutorialBlocks.Count)
+        {
+            tutorialBlocks[tutorialCounter - 1].transform.SetParent(canvas.transform, true);
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && tutorialCounter < tutorialBlocks.Count) 
+        {
+            if (tutorialCounter-1 >= 0)
+            {
+                tutorialBlocks[tutorialCounter-1].transform.SetParent(canvas.transform, true);
+            }
+            tutorialBlocks[tutorialCounter].transform.SetParent(tutorialBackground.transform, true);
+            tutorialCounter++;
+        }
     }
 
     public void ShowText(string text, float timeShown)

@@ -799,8 +799,8 @@ MonoBehaviour:
   Scene: {fileID: 208181336}
   fireballBar: {fileID: 1094547675}
   emptyfireballBar: {fileID: 1752912029}
-  fireballMinigame: {fileID: 0}
-  slashMinigame: {fileID: 0}
+  fireballMinigame: {fileID: 1094547676}
+  slashMinigame: {fileID: 2132448619}
   emptySlashBar: {fileID: 124316217}
   slashBar: {fileID: 2132448617}
   slashHitBar: {fileID: 706584528}
@@ -2236,7 +2236,6 @@ GameObject:
   - component: {fileID: 1094547674}
   - component: {fileID: 1094547673}
   - component: {fileID: 1094547675}
-  - component: {fileID: 1094547672}
   - component: {fileID: 1094547676}
   m_Layer: 5
   m_Name: FireballEnergyBar
@@ -2245,23 +2244,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1094547672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094547671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1917c43129afb5c4587e1fbb2c301953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Battle: {fileID: 0}
-  fireballBar: {fileID: 1094547675}
-  emptyFireballBar: {fileID: 1752912030}
-  health: {fileID: 1207977204}
-  minigame: 0
 --- !u!222 &1094547673
 CanvasRenderer:
   m_ObjectHideFlags: 0
