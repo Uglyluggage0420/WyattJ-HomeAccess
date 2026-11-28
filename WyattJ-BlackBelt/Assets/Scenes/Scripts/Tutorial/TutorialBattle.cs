@@ -41,63 +41,149 @@ public class TutorialBattle : MonoBehaviour
     public GameObject tutorialBackground;
     public List<GameObject> tutorialBlocks;
     public int tutorialCounter;
+    public TextMeshProUGUI tutorialText;
+        
 
     // Start is called before the first frame update
     void Start()
     {
      //   EnemyMissed.enabled = false;
         slashMinigame.slashMinigame = false;
-        slashBar.enabled = false;
-        emptySlashBar.GetComponent<Image>().enabled = false;
-        slashHitBar.GetComponent<Image>().enabled = false;
         fireballMinigame.minigame = false;
-        fireballBar.enabled = false;
+        fireballBar.GetComponent<Image>().enabled = false;
         emptyfireballBar.GetComponent<Image>().enabled = false;
         Scene.EXPbar.fillAmount = PlayerPrefs.GetFloat("EXPBarFill");
-        FireballVisuals();
-        SlashVisuals();
         failedfireball.GetComponent<SpriteRenderer>().enabled = false;
         moveName = "nothing";
         turn = true;
         burn = false;
-        Attack1.SetActive(false);
-        Attack2.SetActive(false);
-        Attack4.SetActive(false);
         GodText.enabled = false;
-        ShowText("The battle ends if either you or the enemy runs out of health.", 3f);
-        Invoke("ShowSlash", 4f);
+        tutorialText.enabled = true;
+        tutorialText.transform.localPosition = Vector3.zero;
+        tutorialText.transform.SetAsLastSibling();
         
 
        
     }
 
-    public void ShowSlash()
-    {
-
-        ShowText("To use Slash, click the button, and hold Space until the bar fills up to the green box.", 3f);
-        Attack1.SetActive(true);
-        turn = true;
-    }
 
 
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(Input.GetKeyDown(KeyCode.E) && tutorialCounter == tutorialBlocks.Count)
+
+
+        //if (Input.GetKeyDown(KeyCode.E) && tutorialCounter == tutorialBlocks.Count)
+        //{
+        //    tutorialBlocks[tutorialCounter - 1].transform.SetParent(canvas.transform, true);
+        //    tutorialBlocks[tutorialCounter - 2].transform.SetParent(null);
+        //}
+        //else if (Input.GetKeyDown(KeyCode.E) && tutorialCounter < tutorialBlocks.Count)
+        //{
+        //    if (tutorialCounter - 1 >= 1)
+        //    {
+        //        tutorialBlocks[tutorialCounter - 1].transform.SetParent(canvas.transform, true);
+        //        tutorialBlocks[tutorialCounter - 2].transform.SetParent(null);
+        //    }
+        //    else
+        //    {
+        //        tutorialBlocks[tutorialCounter - 1].transform.SetParent(tutorialBackground.transform, true);
+        //    }
+
+           
+        //}
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            tutorialBlocks[tutorialCounter - 1].transform.SetParent(canvas.transform, true);
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && tutorialCounter < tutorialBlocks.Count) 
-        {
-            if (tutorialCounter-1 >= 0)
+            if (tutorialCounter == 0)
             {
-                tutorialBlocks[tutorialCounter-1].transform.SetParent(canvas.transform, true);
+                tutorialText.text = "This is you, the player";
+                tutorialText.transform.localPosition = new Vector3(-245, -10, 0);
+                tutorialBlocks[0].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
             }
-            tutorialBlocks[tutorialCounter].transform.SetParent(tutorialBackground.transform, true);
+            else if (tutorialCounter == 1)
+            {
+                tutorialText.text = "This is your health bar";
+                tutorialText.transform.localPosition = new Vector3(-30, 190, 0);
+                tutorialBlocks[0].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[1].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+            }
+            else if (tutorialCounter == 2)
+            {
+                tutorialText.text = "This is the enemy you are fighting";
+                tutorialText.transform.localPosition = new Vector3(245, 136, 0);
+                tutorialBlocks[1].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[2].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+            }
+            else if (tutorialCounter == 3)
+            {
+                tutorialText.text = "And this is the enemy's health";
+                tutorialText.transform.localPosition = new Vector3(180, 194, 0);
+                tutorialBlocks[2].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[3].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+            }
+            else if (tutorialCounter == 4)
+            {
+                tutorialText.text = "This is your slashing move";
+                tutorialText.transform.localPosition = new Vector3(100, -50, 0);
+                tutorialBlocks[3].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[4].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+            }
+            else if (tutorialCounter == 5)
+            {
+                tutorialText.text = "This is fireball, but can be changed";
+                tutorialText.transform.localPosition = new Vector3(280, -175, 0);
+                tutorialBlocks[4].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[5].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+
+            }
+            else if (tutorialCounter == 6)
+            {
+                tutorialText.text = "This is your run move";
+                tutorialText.transform.localPosition = new Vector3(320, 25, 0);
+                tutorialBlocks[5].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[6].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+
+            }
+            else if (tutorialCounter == 7)
+            {
+                tutorialText.text = "This is your action bar, where you power up moves";
+                tutorialText.transform.localPosition = new Vector3(0, 60, 0);
+                tutorialBlocks[6].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[7].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+
+            }
+            else if (tutorialCounter == 8)
+            {
+                tutorialText.text = "Finally, this is your EXP bar, which isn't important in battle";
+                tutorialText.transform.localPosition = new Vector3(0, 110, 0);
+                tutorialBlocks[7].transform.SetParent(canvas.transform, true);
+                tutorialBlocks[8].transform.SetParent(tutorialBackground.transform, true);
+                tutorialBackground.transform.SetAsLastSibling();
+                tutorialText.transform.SetAsLastSibling();
+
+            }
             tutorialCounter++;
         }
+
+       
     }
 
     public void ShowText(string text, float timeShown)
@@ -123,15 +209,9 @@ public class TutorialBattle : MonoBehaviour
         fireball.GetComponent<SpriteRenderer>().enabled = false;
     }
 
-    public void FirstEnemyTurn()
-    {
-        ShowText("The enemy has a 90% to hit you, and has a 10% to miss, but can be upgraded to 20%", 3.5f);
-        Invoke("FirstEnemyMove", 3.5f);
-    }
 
     public void EnemyTurn()
     {
-        ShowText("There is a 10% chance to apply burn, dealing 0.125 damage each turn.", 3f);
 
        if (burn == true)
         {
@@ -144,18 +224,12 @@ public class TutorialBattle : MonoBehaviour
     {
         
             PlayerHealth.TakeDamage(enemyHealth.damage);
-      
-        ShowText("Now Click Run to run away. You have 50/50 to run or take 0.25 damage.", 3f);
-        Attack2.SetActive(false);
-        Attack4.SetActive(true);
         PlayerTurn();
         turn = true;
     }
     public void FirstEnemyMove()
     {
             Debug.Log("Enemy Missed");
-            ShowText("You Dodged! Now, use fireball.", 3f);
-            Attack2.SetActive(true);
 
 
 
